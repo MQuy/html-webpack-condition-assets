@@ -1,6 +1,9 @@
 'use strict';
 
 const objectAssign = require('object-assign');
+const defaultOptions = {
+  assets: []
+};
 
 class HtmlWebpackConditionAsset {
   constructor(options) {
@@ -20,7 +23,7 @@ class HtmlWebpackConditionAsset {
           tag.condition = asset.condition;
           return tag;
         });
-        const template = buildTemplate(fixedTags, condAssets);
+        const template = this.buildTemplate(fixedTags, condAssets, publicPath);
 
         htmlPluginData.body = [{
           tagName: 'script',
@@ -59,7 +62,7 @@ class HtmlWebpackConditionAsset {
       .reduce((prev, curr) => prev.concat(curr), [])
   }
 
-  buildTemplate(fixedTags, condAssets) {
+  buildTemplate(fixedTags, condAssets, publicPath) {
     return `
       scripts = [${fixedTags.map(tag => `'${publicPath}${tag.src}'`)}];
       ${condAssets.map((asset) => {
