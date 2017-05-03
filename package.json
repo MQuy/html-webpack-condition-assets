@@ -1,0 +1,23 @@
+{
+  "name": "webpack-html-condition-assets",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {  },
+  "files": [
+    "index.js"
+  ],
+  "author": "MQuy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.14.1",
+    "eslint-config-google": "^0.7.1",
+    "html-webpack-plugin": "^2.26.0",
+    "jasmine": "^2.5.3",
+    "webpack": "^2.2.0"
+  },
+  "peerDependencies": {
+    "webpack": "^2.2.0"
+  }
+}
