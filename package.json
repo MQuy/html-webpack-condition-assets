@@ -13,10 +13,6 @@
   "author": "MQuy",
   "license": "Apache-2.0",
   "devDependencies": {
-    "html-webpack-plugin": "^2.26.0",
-    "webpack": "^2.2.0"
-  },
-  "peerDependencies": {
-    "webpack": "^2.2.0"
+    "html-webpack-plugin": "^2.26.0"
   }
 }
